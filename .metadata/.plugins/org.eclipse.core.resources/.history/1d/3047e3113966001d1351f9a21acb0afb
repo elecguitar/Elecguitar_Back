@@ -1,0 +1,5 @@
+package com.elecguitar.server.dto;
+
+public class Car {
+
+}

@@ -1,0 +1,75 @@
+package com.elecguitar.server.model.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.elecguitar.server.dto.Car;
+import com.elecguitar.server.model.repo.CarRepo;
+
+@Service
+public class CarServiceImpl implements CarService{
+	
+	@Autowired
+	private CarRepo repo;
+	
+	@Autowired
+	public void setCarRepo(CarRepo repo) {
+		this.repo = repo;
+	}
+	
+	public CarRepo getCarRepo() {
+		return repo;
+	}
+
+	@Override
+	public List<Car> selectAll() {
+		// TODO Auto-generated method stub
+		return repo.selectAll();
+	}
+
+	@Override
+	public List<Car> selectFilterPrice() {
+		// TODO Auto-generated method stub
+		return repo.selectFilterPrice();
+	}
+
+	@Override
+	public List<Car> selectFilterElecMileage() {
+		// TODO Auto-generated method stub
+		return repo.selectFilterElecMileage();
+	}
+
+	@Override
+	public List<Car> selectFilterCompany() {
+		// TODO Auto-generated method stub
+		return repo.selectFilterCompany();
+	}
+
+	@Override
+	public List<Car> selectFilterPriceElecMileage() {
+		// TODO Auto-generated method stub
+		return repo.selectFilterPriceElecMileage();
+	}
+
+	@Override
+	public List<Car> selectFilterPriceCompany() {
+		// TODO Auto-generated method stub
+		return repo.selectFilterPriceCompany();
+	}
+
+	@Override
+	public List<Car> selectFilterElecMileageCompany() {
+		// TODO Auto-generated method stub
+		return repo.selectFilterElecMileageCompany();
+	}
+
+	@Override
+	public List<Car> selectFilterPriceElecMileageCompany() {
+		// TODO Auto-generated method stub
+		return repo.selectFilterPriceElecMileageCompany();
+		
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.elecguitar.server;
+
+public class ServerApplication {
+
+}

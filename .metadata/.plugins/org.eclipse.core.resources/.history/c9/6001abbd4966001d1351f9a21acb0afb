@@ -1,0 +1,28 @@
+package com.elecguitar.server.model.repo;
+
+import java.util.List;
+
+import org.apache.ibatis.annotations.Mapper;
+
+import com.elecguitar.server.dto.Car;
+
+@Mapper
+public interface CarRepo {
+	
+	List<Car> selectAll();
+	
+	List<Car> selectFilterPrice();
+	
+	List<Car> selectFilterElecMileage();
+	
+	List<Car> selectFilterCompany();
+	
+	List<Car> selectFilterPriceElecMileage();
+	
+	List<Car> selectFilterPriceCompany();
+	
+	List<Car> selectFilterElecMileageCompany();
+	
+	List<Car> selectFilterPriceElecMileageCompany();
+	
+}

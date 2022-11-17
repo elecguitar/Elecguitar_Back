@@ -1,0 +1,48 @@
+package com.elecguitar.server.dto;
+
+public class CarDetail {
+	private String carId;
+	private String carName;
+	private String company;
+	private String img;
+	private String manufactureDate; 
+	private int price;
+	private float elecMileage;
+	private int batteryCapacity;
+	private String carType;
+	private int maximumDistance;
+	private int capacity;
+	private String sellStatus;
+	private int maximumMotorOutput;
+	private int maximumMotorTorque;
+	private int weight;
+	private int maximumSpeed;
+	
+	
+	public CarDetail(String carId, String carName, String company, String img, String manufactureDate, int price,
+			float elecMileage, int batteryCapacity, String carType, int maximumDistance, int capacity,
+			String sellStatus, int maximumMotorOutput, int maximumMotorTorque, int weight, int maximumSpeed) {
+		super();
+		this.carId = carId;
+		this.carName = carName;
+		this.company = company;
+		this.img = img;
+		this.manufactureDate = manufactureDate;
+		this.price = price;
+		this.elecMileage = elecMileage;
+		this.batteryCapacity = batteryCapacity;
+		this.carType = carType;
+		this.maximumDistance = maximumDistance;
+		this.capacity = capacity;
+		this.sellStatus = sellStatus;
+		this.maximumMotorOutput = maximumMotorOutput;
+		this.maximumMotorTorque = maximumMotorTorque;
+		this.weight = weight;
+		this.maximumSpeed = maximumSpeed;
+	}
+	
+	
+	
+	
+}
+
