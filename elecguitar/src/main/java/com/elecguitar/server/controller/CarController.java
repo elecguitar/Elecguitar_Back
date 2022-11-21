@@ -15,19 +15,25 @@ import org.springframework.web.bind.annotation.RestController;
 import com.elecguitar.server.dto.Car;
 import com.elecguitar.server.model.service.CarService;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+
 
 @RequestMapping("/carapi")
 @RestController
+@Api(value="Elecguitar API V1")
 public class CarController {
 	
 	@Autowired
 	private CarService carService;
 	
+	@ApiOperation(value="모든 전기차의 정보를 반환한다.")
 	@GetMapping("/car")
 	public List<Car> selectAll(){
 		return carService.selectAll();
 	}
 	
+	@ApiOperation(value="price 범위 내의 전기차 정보를 반환한다.")
 	@GetMapping("/car/price")
 	public List<Car> selectFilterPrice(
 			@RequestParam int startPrice, 
@@ -39,6 +45,7 @@ public class CarController {
 		return carService.selectFilterPrice(map);
 	}
 	
+	@ApiOperation(value="elecMileage 범위 내의 전기차 정보를 반환한다.")
 	@GetMapping("/car/elecmileage")
 	public List<Car> selectFilterElecMileage(
 			@RequestParam int startElecMileage, 
@@ -50,6 +57,7 @@ public class CarController {
 		return carService.selectFilterElecMileage(map);
 	}
 	
+	@ApiOperation(value="company 리스트에 포함되는 전기차의 정보를 반환한다.")
 	@GetMapping("/car/company")
 	public List<Car> selectFilterElecMileage(
 			@RequestParam List<String> companyList
@@ -63,6 +71,7 @@ public class CarController {
 		return resultList;
 	}
 	
+	@ApiOperation(value="price 범위와 elecMileage 범위 내의 전기차 정보를 반환한다.")
 	@GetMapping("/car/price-elecmileage")
 	public List<Car> selectFilterPriceElecMileage(
 			@RequestParam int startPrice, 
@@ -78,6 +87,7 @@ public class CarController {
 		return carService.selectFilterPriceElecMileage(map);
 	}
 	
+	@ApiOperation(value="price 범위와 company 리스트에 포함되는 전기차 정보를 반환한다.")
 	@GetMapping("/car/price-company")
 	public List<Car> selectFilterPriceCompany(
 			@RequestParam int startPrice, 
@@ -95,6 +105,7 @@ public class CarController {
 		return resultList;
 	}
 	
+	@ApiOperation(value="elecMileage 범위와 company 리스트에 포함되는 전기차 정보를 반환한다.")
 	@GetMapping("/car/elecmileage-company")
 	public List<Car> selectFilterElecMileageCompany(
 			@RequestParam int startElecMileage, 
@@ -112,6 +123,7 @@ public class CarController {
 		return resultList;
 	}
 	
+	@ApiOperation(value="price 범위와 elecMileage 범위와 company 리스트에 포함되는 전기차 정보를 반환한다.")
 	@GetMapping("/car/price-elecmileage-company")
 	public List<Car> selectFilterPriceElecMileageCompany(
 			@RequestParam int startPrice, 

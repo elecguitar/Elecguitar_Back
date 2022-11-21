@@ -1,5 +1,8 @@
 package com.elecguitar.server.dto;
 
+import io.swagger.annotations.ApiModel;
+
+@ApiModel(value = "Car : 전기차 정보", description = "전기차 리스트 화면에 제공할 전기차 정보")
 public class Car {
 	private int carId;
 	private String carName;
