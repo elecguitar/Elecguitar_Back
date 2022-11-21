@@ -12,7 +12,8 @@
 		manufacture_date,
 		price,
 		elec_mileage,
-		battery_capacity
+		battery_capacity,
+		sell_status
 		from car;
 	</select>
 
@@ -24,7 +25,8 @@
 		manufacture_date,
 		price,
 		elec_mileage,
-		battery_capacity
+		battery_capacity,
+		sell_status
 		from car
 		where price between #{startPrice} and #{endPrice};
 	</select>
@@ -37,7 +39,8 @@
 		manufacture_date,
 		price,
 		elec_mileage,
-		battery_capacity
+		battery_capacity,
+		sell_status
 		from car
 		where elec_mileage between #{startElecMileage} and #{endElecMileage};
 	</select>
@@ -50,7 +53,8 @@
 		manufacture_date,
 		price,
 		elec_mileage,
-		battery_capacity
+		battery_capacity,
+		sell_status
 		from car
 		where company = #{company};
 	</select>
@@ -63,7 +67,8 @@
 		manufacture_date,
 		price,
 		elec_mileage,
-		battery_capacity
+		battery_capacity,
+		sell_status
 		from car
 		where price between #{startPrice} and #{endPrice}
 		and elec_mileage between #{startElecMileage} and #{endElecMileage};
@@ -77,7 +82,8 @@
 		manufacture_date,
 		price,
 		elec_mileage,
-		battery_capacity
+		battery_capacity,
+		sell_status
 		from car
 		where price between #{startPrice} and #{endPrice}
 		and company = #{company};
@@ -91,7 +97,8 @@
 		manufacture_date,
 		price,
 		elec_mileage,
-		battery_capacity
+		battery_capacity,
+		sell_status
 		from car
 		where elec_mileage between #{startElecMileage} and #{endElecMileage}
 		and company = #{company};
@@ -105,7 +112,8 @@
 		manufacture_date,
 		price,
 		elec_mileage,
-		battery_capacity
+		battery_capacity,
+		sell_status
 		from car
 		where price between #{startPrice} and #{endPrice}
 		and elec_mileage between #{startElecMileage} and #{endElecMileage}
