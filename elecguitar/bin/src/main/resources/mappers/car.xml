@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.elecguitar.server.model.repo.CarRepo">
+
+	<select id="selectAll" resultType="Car">
+		select
+		car_id,
+		car_name,
+		img,
+		manufacture_date,
+		price,
+		elec_mileage,
+		battery_capacity,
+		sell_status
+		from car;
+	</select>
+
+	<select id="selectFilterPrice" parameterType="Map" resultType="Car">
+		select
+		car_id,
+		car_name,
+		img,
+		manufacture_date,
+		price,
+		elec_mileage,
+		battery_capacity,
+		sell_status
+		from car
+		where price between #{startPrice} and #{endPrice};
+	</select>
+
+	<select id="selectFilterElecMileage" parameterType="Map" resultType="Car">
+		select
+		car_id,
+		car_name,
+		img,
+		manufacture_date,
+		price,
+		elec_mileage,
+		battery_capacity,
+		sell_status
+		from car
+		where elec_mileage between #{startElecMileage} and #{endElecMileage};
+	</select>
+
+	<select id="selectFilterCompany" parameterType="Map" resultType="Car">
+		select
+		car_id,
+		car_name,
+		img,
+		manufacture_date,
+		price,
+		elec_mileage,
+		battery_capacity,
+		sell_status
+		from car
+		where company = #{company};
+	</select>
+
+	<select id="selectFilterPriceElecMileage" parameterType="Map" resultType="Car">
+		select
+		car_id,
+		car_name,
+		img,
+		manufacture_date,
+		price,
+		elec_mileage,
+		battery_capacity,
+		sell_status
+		from car
+		where price between #{startPrice} and #{endPrice}
+		and elec_mileage between #{startElecMileage} and #{endElecMileage};
+	</select>
+
+	<select id="selectFilterPriceCompany" parameterType="Map" resultType="Car">
+		select
+		car_id,
+		car_name,
+		img,
+		manufacture_date,
+		price,
+		elec_mileage,
+		battery_capacity,
+		sell_status
+		from car
+		where price between #{startPrice} and #{endPrice}
+		and company = #{company};
+	</select>
+
+	<select id="selectFilterElecMileageCompany" parameterType="Map" resultType="Car">
+		select
+		car_id,
+		car_name,
+		img,
+		manufacture_date,
+		price,
+		elec_mileage,
+		battery_capacity,
+		sell_status
+		from car
+		where elec_mileage between #{startElecMileage} and #{endElecMileage}
+		and company = #{company};
+	</select>
+
+	<select id="selectFilterPriceElecMileageCompany" parameterType="Map" resultType="Car">
+		select
+		car_id,
+		car_name,
+		img,
+		manufacture_date,
+		price,
+		elec_mileage,
+		battery_capacity,
+		sell_status
+		from car
+		where price between #{startPrice} and #{endPrice}
+		and elec_mileage between #{startElecMileage} and #{endElecMileage}
+		and company = #{company};
+	</select>
+
+
+</mapper>
