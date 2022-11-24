@@ -33,5 +33,5 @@ build/
 .vscode/
 
 # ignore properties file
-.json
-.properties
+firebase/
+application.properties
