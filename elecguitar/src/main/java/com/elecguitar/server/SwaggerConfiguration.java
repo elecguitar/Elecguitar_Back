@@ -41,6 +41,6 @@ public class SwaggerConfiguration {
 	    }
 
 		private Predicate<String> postPaths() {
-			return regex("/carapi/.*");
+			return regex("/.*");
 		}
 }
